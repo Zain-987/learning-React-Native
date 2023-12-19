@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Counter from './src/counter/Counter';
+import { StatusBar } from "expo-status-bar";
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import Counter from "./src/counter/Counter";
+import Todo from "./src/todos/page/Todo";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Counter/>
+    <SafeAreaView style={styles.container}>
+      <Counter />
+
+      {/* <Todo /> */}
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 20,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
